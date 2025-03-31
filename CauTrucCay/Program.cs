@@ -149,14 +149,13 @@ namespace CauTrucCay
             {
                 Console.WriteLine("Chương trình quản lý cây nhị phân tìm kiếm");
                 Console.WriteLine("1. Tạo Cây");
-                Console.WriteLine("2. Duyệt cây theo LNR");
-                Console.WriteLine("3. Đếm số nút của cây");
-                Console.WriteLine("4. Đếm số nút lá của cây");
-                Console.WriteLine("5. Tìm phần tử nhỏ nhất của cây");
-                Console.WriteLine("6. Tính tổng các phần tử trong cây");
-                Console.WriteLine("7.Thêm Nút");
-                Console.WriteLine("8. Thoát");
-                Console.WriteLine("Chọn chức năng: ");
+                Console.WriteLine("2. Thêm Nút");
+                Console.WriteLine("3. Duyệt cây theo LNR");
+                Console.WriteLine("4. Đếm số nút của cây");
+                Console.WriteLine("5. Đếm số nút lá của cây");
+                Console.WriteLine("6. Tìm phần tử nhỏ nhất của cây");
+                Console.WriteLine("7. Tính tổng các phần tử trong cây");
+                Console.WriteLine("8.Thoát");
                 chon = int.Parse(Console.ReadLine());
                 switch (chon)
                 {
@@ -166,31 +165,30 @@ namespace CauTrucCay
                         break;
                     case 2:
                         clear();
-                        Console.WriteLine($"Duyệt cây theo LNR: ");
-                        tree.LNR(tree.root);
-                        Console.WriteLine();
-                        break;
-                    case 3:
-                        clear();
-                        Console.WriteLine($"Số nút của cây: {tree.DemSoNut(tree.root)}");
-                        break;
-                    case 4:
-                        clear();
-                        Console.WriteLine($"Số nút lá của cây: {tree.DemSoNutLa(tree.root)}");
-                        break;
-                    case 5:
-                        clear();
-                        Console.WriteLine($"Phần tử nhỏ nhất của cây:  {tree.TimMin(tree.root)}");
-                        break;
-                    case 6:
-                        clear();
-                        Console.WriteLine($"Tổng các phần tử trong cây: {tree.TinhTong(tree.root)}");
-                        break;
-                    case 7:
-                        clear();
                         Console.WriteLine("Nhập Phần Tử Cần Thêm: ");
                         int x = int.Parse(Console.ReadLine());
                         tree.ThemNut(ref tree.root, x);
+                        break;
+                    case 3:
+                        clear();
+                        Console.WriteLine("Duyệt Cây Theo LNR: ");
+                        tree.LNR(tree.root);
+                        break;
+                    case 4:
+                        clear();
+                        Console.WriteLine("Số Nút Của Cây: {0}", tree.DemSoNut(tree.root));
+                        break;
+                    case 5:
+                        clear();
+                        Console.WriteLine("Số Nút Lá Của Cây: {0}", tree.DemSoNutLa(tree.root));
+                        break;
+                    case 6:
+                        clear();
+                        Console.WriteLine("Phần Tử Nhỏ Nhất Của Cây: {0}", tree.TimMin(tree.root));
+                        break;
+                    case 7:
+                        clear();
+                        Console.WriteLine("Tổng Các Phần Tử Trong Cây: {0}", tree.TinhTong(tree.root));
                         break;
                     case 8:
                         clear();
