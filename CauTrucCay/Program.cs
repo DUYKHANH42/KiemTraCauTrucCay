@@ -142,6 +142,7 @@ namespace CauTrucCay
         }
         public static void Menu()
         {
+            Console.OutputEncoding = Encoding.UTF8;
             BST tree = new BST();
             int chon;
             do
