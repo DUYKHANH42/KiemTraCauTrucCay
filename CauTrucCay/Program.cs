@@ -154,7 +154,8 @@ namespace CauTrucCay
                 Console.WriteLine("4. Đếm số nút lá của cây");
                 Console.WriteLine("5. Tìm phần tử nhỏ nhất của cây");
                 Console.WriteLine("6. Tính tổng các phần tử trong cây");
-                Console.WriteLine("7. Thoát");
+                Console.WriteLine("7.Thêm Nút");
+                Console.WriteLine("8. Thoát");
                 Console.WriteLine("Chọn chức năng: ");
                 chon = int.Parse(Console.ReadLine());
                 switch (chon)
@@ -186,6 +187,12 @@ namespace CauTrucCay
                         Console.WriteLine($"Tổng các phần tử trong cây: {tree.TinhTong(tree.root)}");
                         break;
                     case 7:
+                        clear();
+                        Console.WriteLine("Nhập Phần Tử Cần Thêm: ");
+                        int x = int.Parse(Console.ReadLine());
+                        tree.ThemNut(ref tree.root, x);
+                        break;
+                    case 8:
                         clear();
                         Console.WriteLine("Hẹn Gặp Lại!");
                         break;
