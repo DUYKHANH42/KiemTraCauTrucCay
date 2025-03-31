@@ -129,14 +129,14 @@ namespace CauTrucCay
     class Program
     {
         static void Main(string[] args)
-        {;
+        {
             MeNu.Menu();
             Console.ReadKey();
         }
     }
     class MeNu
     {
-        public  static void clear()
+        public static void clear()
         {
             Console.Clear();
         }
@@ -165,7 +165,7 @@ namespace CauTrucCay
                         break;
                     case 2:
                         clear();
-                        Console.WriteLine("Duyệt cây theo LNR: ");
+                        Console.WriteLine($"Duyệt cây theo LNR: ");
                         tree.LNR(tree.root);
                         Console.WriteLine();
                         break;
