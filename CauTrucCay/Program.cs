@@ -100,7 +100,7 @@ namespace CauTrucCay
             }
             if (root.left == null && root.right == null)
             {
-                return 1;
+                return root.data;
             }
             return DemSoNutLa(root.left) + DemSoNutLa(root.right);
         }
