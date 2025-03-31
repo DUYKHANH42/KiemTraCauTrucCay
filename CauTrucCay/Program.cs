@@ -200,7 +200,7 @@ namespace CauTrucCay
                         break;
                 }
             }
-            while (chon != 7);
+            while (chon != 8);
         }
     }
 }
